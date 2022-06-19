@@ -22,6 +22,6 @@ We plan to add lot more algorithms, insertion-deletion in different Data Structu
 
 ![Screenshot from 2022-06-19 16-27-19](https://user-images.githubusercontent.com/95957656/174477608-139adf4b-8b93-4984-b773-ce739b5823b0.png)
 
-## Video of the running program 
+## Video Demonstration of the program
 
 https://user-images.githubusercontent.com/95957656/174478306-c6304c23-74bb-417c-aadb-fcdef5ef037c.mp4
