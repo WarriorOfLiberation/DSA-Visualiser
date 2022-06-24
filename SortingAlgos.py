@@ -6,20 +6,6 @@ MAX_SIZE = sys.maxsize
 
 
 
-def bubble_sort(data, drawData, timeTick):
-    for x in range(len(data) - 1):
-        for i in range(len(data) - 1):
-            if data[i] > data[i + 1]:
-                temp = data[i]
-                data[i] = data[i + 1]
-                data[i + 1] = temp
-
-            drawData(data, ['lightgreen' if x == i or x == i + 1 else '#3b4249' for x in range(len(data))])
-            time.sleep(timeTick)
-        drawData(data, ['#000080' for x in range(len(data))])
-        flag = 0
-
-
 def insertion_sort(data, drawData, timeTick):
     for i in range(1,len(data)): # Run the loop through the entireity of the Array
         value = data[i]
