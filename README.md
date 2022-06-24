@@ -25,5 +25,3 @@ We plan to add lot more algorithms, insertion-deletion in different Data Structu
 ## Video Demonstration of the program
 
 https://user-images.githubusercontent.com/95957656/174478306-c6304c23-74bb-417c-aadb-fcdef5ef037c.mp4
-
-this is a new line
