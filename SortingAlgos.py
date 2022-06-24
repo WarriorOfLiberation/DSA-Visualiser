@@ -150,6 +150,50 @@ def quick_sort(data, drawData, timeTick):
 
 
 ############# Heap Sort #############
+def merge_sort(data, drawData, timeTick):
+    algo_merge(data, 0, len(data) - 1, drawData, timeTick)
+
+    drawData(data, ['green' for x in range(len(data))])
+    time.sleep(timeTick)
+
+
+def algo_merge(data, left, right, drawData, timeTick):
+    if left >= right:
+        return
+    middle = (left + right) // 2
+
+    algo_merge(data, left, middle, drawData, timeTick)
+    algo_merge(data, middle + 1, right, drawData, timeTick)
+    merge(data, left, middle, right, drawData, timeTick)
+
+
+def merge(data, left, middle, right, drawData, timeTick):
+    drawData(data, ['#3b4249' for x in range(len(data))])
+    time.sleep(timeTick)
+
+    leftside = data[left:middle + 1]
+    rightside = data[middle + 1:right + 1]
+
+    leftarr, rightarray = 0, 0
+
+    for ink in range(left, right + 1):
+        if leftarr < len(leftside) and rightarray < len(rightside):
+            if leftside[leftarr] <= rightside[rightarray]:
+                data[ink] = leftside[leftarr]
+                leftarr += 1
+            else:
+                data[ink] = rightside[rightarray]
+                rightarray += 1
+        elif leftarr < len(leftside):
+            data[ink] = leftside[leftarr]
+            leftarr += 1
+        else:
+            data[ink] = rightside[rightarray]
+            rightarray += 1
+
+        drawData(data, ['lightblue' if x == ink else '#3b4249' for x in range(len(data))])
+        time.sleep(timeTick)
+colordata = []
 
 
 def heap_sort(data, drawData, timeTick):
